@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Charon - Oauth authentication server</title>
+        <meta charset="utf-8" />
+ 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css" th:href="@{/css/main.css}" />
+        <link rel="stylesheet" href="css/main.css" th:href="@{/css/form-login.css}" />
+	</head>
+    <body>
+        <div th:replace="index::brand-panel"></div>
+        <div th:replace="index::menu-panel"></div>
+        
+		<div class="login-form">
+			<form th:action="@{/login}" method="post">
+				<div class="img-container">
+					<img th:src="@{/images/img_avatar2.png}" alt="Avatar" class="avatar">
+				</div>
+				
+       			<div th:replace="index::alerts-panel"></div>
+
+				<div class="container">
+					<label for="username"><b>Username</b></label>
+					<input type="text" placeholder="Enter Username" id="username" name="username" autofocus="autofocus" required>
+
+					<label for="password"><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" id="password" name="password" required>
+
+					<button type="submit">Login</button>
+				</div>
+				
+				<!-- 
+				<div class="create-account-link">
+					<a href="">Create an account</a>
+				</div>
+				-->
+			</form>
+		</div>
+    </body>
+</html>

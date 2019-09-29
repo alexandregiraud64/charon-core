@@ -1,0 +1,129 @@
+/* ************************************************************************* */
+/* MAIN																		 */
+/* ************************************************************************* */
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+	padding: 16px;
+    width: fit-content;
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+button:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type=text], input[type=password], input[type=email] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+
+/* ************************************************************************* */
+/* PANEL MENU															 */
+/* ************************************************************************* */
+.menu {
+	float: left;
+	margin: 15px;
+	position: absolute;
+	top: 20px;
+	left: 25px;
+	z-index: 999;
+}
+
+.menu-element {
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 5px 16px;
+	margin: 4px 0;
+	text-align: center;
+	color: white;
+	background-color: black;
+}
+
+.menu-element a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.menu-element button {
+	background-color: #fff;
+	color: #000;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.menu-element button:hover {
+	color: #fff;
+	background-color: #000;
+}
+
+/* ************************************************************************* */
+/* PANEL BRAND																 */
+/* ************************************************************************* */
+.brand-link, .brand-link:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.brand-container {
+	text-align: center;
+	position: relative;
+	margin: 0 auto;
+}
+
+.brand-logo {
+	border-radius: 50%;
+	max-height: 100px;
+	padding: 10px 20px 0;
+}
+
+.brand-slogan {
+	line-height: 1.4;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: 100;
+	padding: 0 20px 10px;
+	font-style: italic;
+}
+
+/* ************************************************************************* */
+/* PANEL BRAND																 */
+/* ************************************************************************* */
+.container-alerts {
+	border: 2px solid black;
+	border-radius: 16px;
+	max-width: 520px;
+	margin: 25px auto;
+	padding-top: 20px;
+}

@@ -1,0 +1,22 @@
+.login-form {
+	border: 2px solid black;
+	border-radius: 16px;
+	max-width: 520px;
+	margin: 25px auto;
+}
+
+.img-container {
+	text-align: center;
+	margin: 24px 0 12px 0;
+	position: relative;
+}
+
+img.avatar {
+	width: 30%;
+	border-radius: 50%;
+}
+
+.create-account-link {
+	text-align: center;
+	padding-bottom: 16px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Charon - Oauth authentication server</title>
+        <meta charset="utf-8" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css" th:href="@{/css/main.css}" />
+        <link rel="stylesheet" href="css/form-approval.css" th:href="@{/css/form-approval.css}" />
+    </head>
+    <body>
+        <div th:replace="index::brand-panel"></div>
+        <div th:replace="index::menu-panel"></div>
+    
+		<div class="approval-form">
+			<form method="post" th:action="@{/oauth/authorize}">
+				<input name="user_oauth_approval" value="true" type="hidden"/>
+				<input type="hidden" name="_csrf" th:value="${_csrf.token}" />
+				
+				<div class="container">
+					<p>Do you authorize "<span class="scope-name" th:utext="${client.displayName}">CLIENT_NAME</span>" to access your protected resources?</p>
+					<ul>
+						<th:block th:each="scope : ${scopes}">
+							<li>
+								<div class="form-group">
+									<div class="input-label">
+										Scope "<span class="scope-name" th:utext="${scope.value.name}">profile</span>":
+									</div>
+									<input type="radio" th:name="${scope.value.prefix}+${scope.value.name}" value="true" th:checked="${scope.value.isApproved()}">Approve
+									<input type="radio" th:name="${scope.value.prefix}+${scope.value.name}" value="false" th:checked="${!scope.value.isApproved()}">Deny
+								</div>
+								<div class="scope-description">
+									The "profile" scope give access to the personnal data composing your profile. (Fields: name, family name, given name, middle name, nickname, preferred name, profile, picture, website, gender, birthdate, zone info, locale, updated at)
+								</div>
+							</li>
+						</th:block>
+					</ul>
+					<button type="submit">Authorize</button>
+				</div>
+			</form>
+		</div>
+    </body>
+</html>

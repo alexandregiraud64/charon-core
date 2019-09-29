@@ -1,0 +1,56 @@
+.error-container {
+	border: 2px solid black;
+	border-radius: 16px;
+	max-width: 760px;
+	text-align: center;
+	padding: 10px;
+	margin: 20vh auto;
+}
+
+.error-status {
+	line-height: 1.4;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 50px;
+	font-weight: 200;
+	padding: 0 20px;
+}
+
+.error-message {
+	line-height: 1.4;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: 100;
+	padding: 0 20px 10px;
+	font-style: italic;
+}
+
+.error-container a {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	display: inline-block;
+	font-weight: 700;
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 13px 23px;
+	background: #000;
+	font-size: 18px;
+	-webkit-transition: .2s all;
+	transition: .2s all;
+	border: 2px solid black;
+	margin-bottom: 3px;
+}
+
+.error-container a:hover {
+	color: #000;
+	background: #fff;
+}
+
+@media only screen and (max-width:480px) {
+	.error-status {
+		font-size: 16px;
+	}
+	.error-container a {
+		padding: 7px 15px;
+		font-size: 14px;
+	}
+}

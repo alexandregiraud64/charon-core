@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Charon - Oauth authentication server</title>
+        <meta charset="utf-8" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css" th:href="@{/css/main.css}" />
+        <link rel="stylesheet" href="css/panel-error.css" th:href="@{/css/panel-error.css}" />
+    </head>
+    <body th:with="httpStatus=${T(org.springframework.http.HttpStatus).valueOf((#response != null)? #response.status : 500)}">
+        <div th:replace="index::brand-panel"></div>
+        <div th:replace="index::menu-panel"></div>
+        
+		<div class="error-container">
+			<div class="error-status" th:text="|${httpStatus} - ${httpStatus.reasonPhrase}|">404 - The Page can't be found</div>
+			<div class="error-message" th:utext="${errorMessage}">Error java.lang.NullPointerException</div>
+			<a href="index" th:href="@{/index}">GO TO HOMEPAGE</a>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+.approval-form {
+	border: 2px solid black;
+	border-radius: 16px;
+	max-width: 520px;
+	margin: 25px auto;
+}
+
+.approval-form ul {
+	padding-inline-start: 40px;
+	padding-right: 40px;
+}
+
+.approval-form li {
+	list-style: none;
+	margin: 20px 0;
+}
+
+.client-name {
+	font-weight: bold;
+}
+
+.scope-name {
+	font-weight: bold;
+}
+
+.scope-description {
+	font-size: 12px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.input-label {
+	width: 200px;
+	display: inline-block;
+	padding: 5px;
+}
